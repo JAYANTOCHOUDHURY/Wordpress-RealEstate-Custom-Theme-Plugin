@@ -1,0 +1,61 @@
+/*
+	Theme Name: Real Estate Theme
+	Theme URI: http://localhost/realestate/
+	Description: A custom-built real estate WordPress theme.
+	Author: Jayanto Choudhury
+	Author URI: http://localhost/
+	Version: 1.0
+	Tags: real estate, custom theme, responsive
+	Text Domain: realestate-theme
+*/
+
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header,
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+.hero {
+    padding: 2rem;
+    background: #f0f0f0;
+    text-align: center;
+}
+
+.properties {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 1rem;
+}
+
+.property {
+    flex: 1 1 calc(33.333% - 20px);
+    background: #fff;
+    padding: 1rem;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+    .property {
+        flex: 1 1 100%;
+    }
+}
+
+.success-message {
+  background-color: #e6ffed;
+  border-left: 5px solid #2ecc71;
+  padding: 15px;
+  margin-top: 20px;
+  border-radius: 5px;
+}
+
+
+

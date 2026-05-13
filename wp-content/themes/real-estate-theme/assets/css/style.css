@@ -1,0 +1,1179 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Base */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    line-height: 1.6;
+    background-color: #f5f5f5;
+    color: #333;
+    padding: 0 15px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 30px 15px;
+}
+
+h2 {
+    font-size: 1.8rem;
+    margin: 30px 0 20px;
+    color: #222;
+}
+
+/* Hero Section */
+
+.hero h2 {
+    font-size: 3.8rem;
+    margin-bottom: 10px;
+    background: linear-gradient(to right, red, yellow);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    /* for some newer browsers */
+    color: transparent;
+}
+
+.hero p {
+    font-size: 1.7rem;
+    /* fixed typo from 'rame' to 'rem' */
+    background: linear-gradient(to right, black, blue);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+    font-weight: 500;
+}
+
+/* Base styles for desktop (already added) */
+.hero h2 {
+    font-size: 3.8rem;
+    background: linear-gradient(to right, red, yellow);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+    text-align: center;
+    padding: 0 10px;
+    margin-bottom: 10px;
+    line-height: 1.1;
+    word-wrap: break-word;
+}
+
+.hero p {
+    font-size: 1.7rem;
+    background: linear-gradient(to right, black, blue);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+    text-align: center;
+    padding: 0 10px;
+    line-height: 1.4;
+    word-wrap: break-word;
+}
+
+/* ✅ Responsive tweaks for small screens */
+@media (max-width: 480px) {
+    .hero h2 {
+        font-size: 2.2rem;
+        line-height: 1.2;
+    }
+
+    .hero p {
+        font-size: 1.4rem;
+        line-height: 1.4;
+    }
+
+    .hero {
+        height: auto;
+        padding: 40px 15px;
+    }
+}
+
+.banner-content {
+    max-width: 90%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+
+
+/* Filter Form */
+.property-filter {
+    background: white;
+    padding: 30px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
+    border: 2px solid rgb(2, 2, 2);
+    background: rgb(232, 232, 228) !important;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s ease-out;
+}
+
+.property-filter.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.filter-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+.filter-item label {
+    font-weight: 600;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.filter-item input,
+.filter-item select {
+    width: 100%;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.filter-actions {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.filter-actions button,
+.filter-actions .clear-filters {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.filter-actions button {
+    background: #007bff;
+    color: white;
+}
+
+.filter-actions .clear-filters {
+    background: #444;
+    color: white;
+    text-decoration: none;
+}
+
+.filter-actions button:hover,
+.filter-actions .clear-filters:hover {
+    opacity: 0.9;
+}
+
+/* Property Grid */
+.property-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 25px;
+    margin-bottom: 40px;
+}
+
+/* Property Card */
+.property-card {
+    background: white;
+    overflow: hidden;
+    border-radius: 5px !important;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.07);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: #ffffff;
+    max-width: 1000px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.property-card:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.property-thumbnail img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+.property-title {
+    font-size: 10px;
+    margin-bottom: 1px;
+    color: #007bff;
+}
+
+.property-type {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 4px;
+}
+
+.property-meta {
+    list-style: none;
+    margin-bottom: 7px;
+    font-size: 0.95rem;
+    color: #333;
+}
+
+.property-meta li {
+    margin-bottom: 5px;
+}
+
+/* View Button */
+.view-button {
+    display: inline-block;
+    background: #007bff;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.view-button:hover {
+    background: #0056b3;
+}
+
+/* Pagination */
+.pagination {
+    text-align: center;
+    margin-top: 30px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.pagination.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.pagination a,
+.pagination span {
+    display: inline-block;
+    padding: 8px 12px;
+    margin: 0 4px;
+    background: #eee;
+    color: #333;
+    border-radius: 4px;
+    text-decoration: none;
+}
+
+.pagination .current {
+    background: #007bff;
+    color: white;
+    font-weight: bold;
+}
+
+/* Active filter tags (future use if needed) */
+.active-filters {
+    margin: 15px 0;
+}
+
+.filter-tag {
+    display: inline-block;
+    background: #e0e0e0;
+    color: #333;
+    padding: 5px 10px;
+    border-radius: 20px;
+    margin: 5px 5px 0 0;
+    font-size: 0.85rem;
+}
+
+.filter-tag button {
+    background: transparent;
+    border: none;
+    color: #333;
+    margin-left: 6px;
+    cursor: pointer;
+}
+
+/* Responsive */
+@media (min-width: 600px) {
+    .filter-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .property-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 900px) {
+    .filter-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .property-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Header */
+.site-header {
+    background-color: #222;
+    color: white;
+    padding: 12px 0;
+    position: relative;
+    z-index: 1000;
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeDown 0.5s ease-out forwards;
+}
+
+@keyframes fadeDown {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.header-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* Nav */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+}
+
+.main-nav {
+    display: flex;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 30px;
+}
+
+.nav-menu li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-menu li a:hover {
+    color: #00c6ff;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .main-nav {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .main-nav.active {
+        display: flex;
+    }
+
+    .nav-menu {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .nav-menu li a {
+        font-size: 1.2rem;
+    }
+}
+
+
+/* Default hidden */
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 250px;
+    height: 100%;
+    background: #fff;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+    z-index: 1001;
+    transition: right 0.3s ease;
+}
+
+.mobile-menu.open {
+    right: 0;
+}
+
+.menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 1000;
+    display: none;
+}
+
+.menu-overlay.active {
+    display: block;
+}
+
+.close-menu {
+    background: none;
+    border: none;
+    font-size: 24px;
+    padding: 15px;
+    cursor: pointer;
+}
+
+.mobile-menu .nav-menu {
+    list-style: none;
+    padding: 20px;
+    color: #000;
+    /* or #fff if using dark background */
+}
+
+.mobile-menu .nav-menu li a {
+    display: block;
+    padding: 10px 0;
+    color: #000;
+    text-decoration: none;
+}
+
+/* Make single property page mobile-friendly */
+@media (max-width: 768px) {
+    .single-property {
+        padding: 5rem;
+    }
+
+    .single-property img {
+        display: block;
+
+    }
+
+    .single-property h1,
+    .single-property h2,
+    .single-property p {
+        font-size: 1rem;
+        line-height: 1.5;
+    }
+
+    .property-meta {
+        font-size: 0.95rem;
+        margin-bottom: 1rem;
+    }
+
+    .property-meta strong {
+        display: block;
+        margin-bottom: 0.25rem;
+    }
+}
+
+.single-property {
+    max-width: 950px;
+    margin: 0 auto;
+    padding: 100px;
+}
+
+.property-meta p {
+    margin: 0.5rem 0;
+}
+
+/* --- Single Property Page Styling --- */
+
+.single-property {
+    background-color: #f5f5f5;
+    padding: 40px 0;
+}
+
+
+.property-title {
+    font-size: 22px;
+    color: #007bff;
+    margin-bottom: 20px;
+    margin-top: 5px;
+    font-weight: 600;
+}
+
+.property-image img {
+    width: 50% !important;
+}
+
+.property-meta {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 25px;
+}
+
+.property-meta li {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.property-content {
+    font-size: 16px;
+    line-height: 1.7;
+    color: #333;
+    margin: 0px 20px;
+}
+@media (min-width: 1024px) {
+    .property-image img{
+        margin-left: 240px !important;
+    }
+}
+@media (min-width: 768px) {
+    .property-image img{
+        margin-left: 200px !important;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .property-title {
+        font-size: 22px;
+    }
+
+    .property-meta li {
+        font-size: 14px;
+    }
+
+    .property-content {
+        font-size: 15px;
+    }
+}
+
+
+
+
+/* --- Clean and Bold Header --- */
+
+.site-header {
+    margin: 0;
+    /* ✅ Adds nice height */
+    background-color: #1e1e1e;
+    color: #fff;
+    box-shadow: none;
+    /* Optional: Remove if using shadows */
+    border: none;
+}
+
+.site-header .container {
+    display: flex;
+    align-items: center;
+    /* ✅ Left-right spacing */
+    max-width: 1220px;
+    margin: 0 auto;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+nav ul li a {
+    color: #fff;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #007bff;
+}
+
+/* ✅ Remove global whitespace */
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* Fix header gap on single property page only */
+.single-property {
+    padding-top: 0;
+    margin-top: 0;
+}
+
+.single-property .container {
+    padding-top: 0;
+    margin-top: 0;
+}
+
+.single-property h1.property-title {
+    margin-top: 10px;
+    padding-top: 0;
+}
+
+body.dark-mode {
+    background-color: #121212;
+    color: #f5f5f5;
+}
+
+body.dark-mode a {
+    color: #89c4ff;
+}
+
+body.dark-mode .property-filter,
+body.dark-mode .property-card,
+body.dark-mode .single-property,
+body.dark-mode .property-content {
+    background-color: #1e1e1e;
+    color: #f0f0f0;
+    border-color: #444;
+}
+
+body.dark-mode .site-header {
+    background-color: #1e1e1e;
+    border-bottom: 1px solid #333;
+}
+
+body.dark-mode .nav-menu li a {
+    color: #fff;
+}
+
+body.dark-mode .nav-menu li a:hover {
+    color: #00c6ff;
+}
+
+body.dark-mode .view-button {
+    background-color: #00c6ff;
+    color: #000;
+}
+
+
+/* Dark Mode Toggle Switch */
+.dark-mode-toggle {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 26px;
+}
+
+.dark-mode-toggle input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.dark-mode-toggle .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 26px;
+}
+
+.dark-mode-toggle .slider::before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+.dark-mode-toggle input:checked+.slider {
+    background-color: #007bff;
+}
+
+.dark-mode-toggle input:checked+.slider::before {
+    transform: translateX(24px);
+}
+
+body.dark-mode .nav-menu li a:hover {
+    color: #00c6ff;
+}
+
+body.dark-mode a:hover {
+    color: #00c6ff;
+}
+
+body.dark-mode input,
+body.dark-mode select,
+body.dark-mode textarea {
+    background-color: #2a2a2a;
+    color: #fff;
+    border: 1px solid #555;
+}
+
+body.dark-mode button {
+    background-color: #333;
+    color: #fff;
+    border: 1px solid #555;
+}
+
+.property-filter {
+    margin-bottom: 2rem;
+}
+
+.filter-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.filter-item label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.filter-item input,
+.filter-item select {
+    width: 100%;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.filter-actions {
+    display: flex;
+    gap: 1rem;
+}
+
+.filter-actions button,
+.filter-actions a {
+    padding: 10px 16px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.clear-filters {
+    background-color: #eee;
+    color: #333;
+}
+
+.property-contact-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 550px;
+}
+
+.property-contact-form input,
+.property-contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 1em;
+}
+
+.property-contact-form button {
+    background: #0073aa;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.property-contact-form button:hover {
+    background: #005177;
+}
+
+/* Contact Agent Section */
+.property-contact-form {
+    background: #f9f9f9;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+    max-width: 500px;
+    margin: 10px auto;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Success Message */
+.property-contact-form .success-message {
+    font-size: 1rem;
+    color: #2ecc71;
+    background-color: #e6ffed;
+    border-left: 4px solid #2ecc71;
+    padding: 5px;
+    border-radius: 6px;
+    margin-bottom: 3px;
+}
+
+/* Heading */
+.property-contact-form h3 {
+    font-size: 1.6rem;
+    margin-bottom: 15px;
+    text-align: center;
+    color: #333;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 5px;
+}
+
+/* Inputs & Textarea */
+.property-contact-form input[type="text"],
+.property-contact-form input[type="email"],
+.property-contact-form input[type="tel"],
+.property-contact-form textarea {
+    width: 100%;
+    padding: 14px 16px;
+    margin-bottom: 2px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    background-color: #fff;
+}
+
+.property-contact-form input:focus,
+.property-contact-form textarea:focus {
+    border-color: #0073e6;
+    box-shadow: 0 0 0 2px rgba(0, 115, 230, 0.2);
+    outline: none;
+}
+
+/* Textarea Resize */
+.property-contact-form textarea {
+    resize: vertical;
+    min-height: 60px;
+}
+
+/* Submit Button */
+.property-contact-form button[type="submit"] {
+    background: linear-gradient(to right, #0073e6, #00c6ff);
+    border: none;
+    color: #fff;
+    padding: 14px 0;
+    width: 100%;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.property-contact-form button[type="submit"]:hover {
+    background: linear-gradient(to right, #005bb5, #0099cc);
+    transform: translateY(-1px);
+}
+
+
+.site-footer {
+    background-color: #333;
+    color: #fff;
+    padding: 40px 0;
+    font-size: 14px;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.footer-left,
+.footer-center,
+.footer-right {
+    flex: 1;
+    min-width: 250px;
+}
+
+.footer-left p,
+.footer-right p {
+    margin: 0;
+    line-height: 1.6;
+}
+
+.footer-social {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+}
+
+.footer-social a {
+    color: #fff;
+    font-size: 30px;
+    transition: color 0.3s ease;
+}
+
+.footer-social li a:hover {
+    color: #1da1f2;
+    /* Twitter Blue or any color */
+}
+
+.footer-social a:hover {
+    color: #1da1f2;
+}
+
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+/* Sticky Footer Layout */
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.site-wrapper {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.site-content {
+    flex: 1;
+}
+
+.featured-properties {
+    margin: 50px 0;
+}
+
+.featured-properties h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2rem;
+}
+
+
+.property-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.property-card h3 {
+    font-size: 1rem;
+    margin-top: 15px !important;
+    margin-left: 9px !important;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    width: 48px;
+    height: 48px;
+    background-color: rgba(0, 0, 0, 0);
+    /* semi-transparent background */
+    color: #000;
+    border-radius: 50%;
+    top: 40%;
+    z-index: 10;
+    transition: background-color 0.3s ease;
+}
+
+/* On hover, darken background */
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+/* Positioning tweaks */
+.swiper-button-next {
+    right: 10px;
+}
+
+.swiper-button-prev {
+    left: 10px;
+}
+
+.property-card {
+    padding: 0 !important;
+}
+
+.property-card .property-details {
+    padding: 0 !important;
+    padding-bottom: 10px !important;
+}
+
+.property-card .property-meta,
+.property-card .property-type,
+.property-card .property-title,
+.property-card .view-button {
+    margin: 0;
+}
+
+.property-card {
+    text-align: left !important;
+}
+
+.property-card h3,
+.property-card .property-type,
+.property-card .property-meta,
+.property-card .view-button {
+    text-align: left !important;
+    margin-left: 10px;
+}
+
+/* Icon wish list button for property card */
+.wishlist-icon-btn {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    background: rgba(255, 255, 255, 0);
+    border: none;
+    cursor: pointer;
+    z-index: 10;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.1s;
+}
+
+.wishlist-icon-btn:hover,
+.wishlist-icon-btn:focus {
+    background: #e4161600;
+}
+
+.wishlist-icon-btn .fa-solid.fa-heart {
+    color: #e41a1a;
+}
+
+.wishlist-icon-btn .fa-regular.fa-heart {
+    color: #000000;
+}
+
+.property-card {
+    position: relative;
+    /* Make sure the card is positioned so its children can absolutely position */
+}
+
+.wishlist-count-badge {
+    background: #919ee8;
+    color: #fff;
+    border-radius: 1em;
+    padding: 1px 8px;
+    font-size: 0.95em;
+    margin-left: 4px;
+    font-weight: bold;
+}
+
+/* Wish List Grid Layout */
+.wishlist-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 32px;
+    margin: 40px 0;
+}
+
+/* Highlight wish list cards */
+.wishlist-grid .property-card {
+    box-shadow: 0 8px 32px rgba(255, 64, 129, 0.1), 0 2px 8px rgba(0, 0, 0, 0.04);
+    border: 2px solid #ffd6e3;
+    border-radius: 12px;
+    background: #fffafe;
+    transition: box-shadow 0.3s, border-color 0.3s;
+    position: relative;
+}
+
+.wishlist-grid .property-card:hover {
+    border-color: #ff4081;
+    box-shadow: 0 12px 24px rgba(255, 64, 129, 0.20), 0 1.5px 4px rgba(0, 0, 0, 0.06);
+}
+
+/* Make remove button bigger, clearer */
+.wishlist-remove-btn {
+    background: linear-gradient(to right, #ff4081, #ff80ab);
+    color: #fff;
+    padding: 9px 14px;
+    border: none;
+    border-radius: 6px;
+    font-weight: 500;
+    cursor: pointer;
+    margin-top: 14px;
+    margin-left: 6px;
+    transition: background 0.2s, box-shadow 0.2s;
+    box-shadow: 0 2px 6px rgba(255, 64, 129, 0.08);
+}
+
+.wishlist-remove-btn:hover {
+    background: linear-gradient(to right, #c51162, #ff4081);
+    color: #fff;
+}
+
+/* Responsive property details tweaks */
+.wishlist-grid .property-title {
+    font-size: 1.2rem;
+    margin-bottom: 3px;
+}
+
+.wishlist-grid .property-meta {
+    font-size: 1rem;
+}
+
+/* Nicer empty state */
+.wishlist-empty-message {
+    padding: 48px 0;
+    text-align: center;
+    font-size: 1.3rem;
+    color: #bb238b;
+    background: #fff0f6;
+    border-radius: 18px;
+    margin: 60px 0 100px 0;
+}
+
+.single-property-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.property-main-content {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.property-details-section {
+    flex: 2;
+}
+
+.property-inquiry-box {
+    flex: 1;
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+}

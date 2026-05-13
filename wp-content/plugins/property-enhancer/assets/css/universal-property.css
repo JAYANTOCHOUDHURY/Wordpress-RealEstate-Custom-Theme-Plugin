@@ -1,0 +1,90 @@
+.universal-property-widget {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+
+.universal-property-widget.layout-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.universal-property-widget.layout-grid .property-card {
+    width: calc(33.33% - 20px);
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    padding: 15px;
+}
+
+.universal-property-widget.layout-list .property-card {
+    width: 100%;
+    border: 1px solid #ccc;
+    padding: 15px;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.property-card-list .property-thumb {
+    flex: 0 0 200px;
+}
+
+.property-card-list .property-thumb img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.property-card-list .property-content {
+    flex: 1;
+}
+
+/* Optional: Slider - basic horizontal scroll for now */
+.universal-property-widget.layout-slider {
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+    scroll-snap-type: x mandatory;
+}
+
+.universal-property-widget.layout-slider .property-card {
+    flex: 0 0 300px;
+    scroll-snap-align: start;
+    border: 1px solid #ddd;
+    padding: 15px;
+    background: #fff;
+}
+
+.property-card-list {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    border: 1px solid #eee;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    background: #fff;
+}
+
+.property-thumb img {
+    max-width: 180px;
+    height: auto;
+    border-radius: 4px;
+}
+
+.property-content {
+    flex: 1;
+}
+
+.property-slider .swiper-slide {
+    background: #fff;
+    border-radius: 8px;
+    padding: 15px;
+    text-align: center;
+}
+
+.property-slider {
+    padding: 30px 10px;
+}

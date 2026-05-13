@@ -1,0 +1,15 @@
+.mortgage-calculator-widget input,
+.mortgage-calculator-widget button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.mortgage-calculator-widget button {
+    background-color: #007cba;
+    color: white;
+    cursor: pointer;
+}
+

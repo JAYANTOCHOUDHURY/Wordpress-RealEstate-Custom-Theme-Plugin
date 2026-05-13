@@ -1,0 +1,74 @@
+.agent-registration-form {
+  max-width: 600px;
+  margin: 10px auto;
+  padding: 25px 25px;
+  background-color: #ffffff;
+  border: 1px solid #e3e3e3;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.agent-registration-form label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #333;
+  margin-top: 5px;
+}
+
+.agent-registration-form input[type="text"],
+.agent-registration-form input[type="email"],
+.agent-registration-form input[type="number"],
+.agent-registration-form input[type="file"],
+.agent-registration-form textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-sizing: border-box;
+  font-size: 15px;
+  transition: all 0.3s ease;
+}
+
+.agent-registration-form input[type="text"]:focus,
+.agent-registration-form input[type="email"]:focus,
+.agent-registration-form input[type="number"]:focus,
+.agent-registration-form textarea:focus {
+  border-color: #007cba;
+  outline: none;
+}
+
+.agent-registration-form textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.agent-registration-form input[type="submit"] {
+  margin-top: 25px;
+  background-color: #007cba;
+  color: #fff;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.agent-registration-form input[type="submit"]:hover {
+  background-color: #005d94;
+}
+
+.success-msg {
+  max-width: 600px;
+  margin: 10px auto;
+  padding: 15px 20px;
+  background-color: #e1f9e5;
+  color: #2b7a33;
+  border: 1px solid #b3e6c0;
+  border-radius: 6px;
+  font-weight: 600;
+  text-align: center;
+}
